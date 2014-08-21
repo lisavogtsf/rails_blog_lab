@@ -12,9 +12,10 @@
 
 <% @posts.each do |post| %>
 	<div>
-	<h1><strong>"<%= post.title %>"</strong> <small>post id: <%= post.id %></small></h1>
-	<h2>by <%= post.author %></h2>
+	<h1><strong>"<%= post.title %>"</strong></h1>
+	<h2>by <%= post.author %>, <small>post #<%= post.id %></small></h2>
 	<p><%= post.description %> </p>
+	<p><%= post.tags.map(&:name) %></p>
 	<a href="/posts/<%= post.id %>">Show</a>
 	</div>
 <% end %>
