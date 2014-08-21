@@ -9,3 +9,12 @@
 	<li>edit a specific tag or post</li>
 	<li>maybe more!!</li>
 </ul>
+
+<% @posts.each do |post| %>
+	<div>
+	<h1><strong>"<%= post.title %>"</strong> <small>post id: <%= post.id %></small></h1>
+	<h2>by <%= post.author %></h2>
+	<p><%= post.description %> </p>
+	<a href="/posts/<%= post.id %>">Show</a>
+	</div>
+<% end %>
