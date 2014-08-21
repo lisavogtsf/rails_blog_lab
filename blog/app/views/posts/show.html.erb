@@ -1,0 +1,8 @@
+<h1>Shows requested post and associated tags</h1>
+
+	<div>
+	<h1><strong>"<%= @post.title %>"</strong></h1>
+	<h2>by <%= @post.author %>, <small>post #<%= @post.id %></small></h2>
+	<p><%= @post.description %> </p>
+	<p><%= @post.tags.map(&:name) %></p>
+	</div>
