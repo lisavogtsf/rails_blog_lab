@@ -1,3 +1,29 @@
+#Rails Blog Lab
+
+#Notes to Self
+
+Some useful things
+* to change database name:
+
+`alter database blog_development rename to old_blog_development`
+
+* display tag names on a post
+`Post.find(4).tags.map(&:name)`
+
+* display post titles with given tag
+`Tag.find(2).posts.map(&:title)`
+
+* add a tag to a post
+`Post.find(4).post_tags << blah.post_tags.create()`
+`Post.find(4).post_tags << Tag.find(1).post_tags.create()`
+
+* find tag by name
+`Tag.find_by_name("classy")`
+
+* find post by title
+`Post.find_by_title("again")`
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the
